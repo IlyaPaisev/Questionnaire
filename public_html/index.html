@@ -1,0 +1,39 @@
+<html lang='ru'>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <title>Анкетирование</title>
+    <header>
+        <link href='style.css' rel='stylesheet' type='text/css' />
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet" />
+    </header>
+    <body>
+        <nav>
+            <div id="preview"><h1 id='text_preview'>Спешите пройти Анкетирование!</h1></div>
+        </nav>
+        <div class="container">
+            <div class="main">  	
+                <input type="checkbox" id="chk" aria-hidden="true">
+        
+                    <div class="signup">
+                        <form action="validations/reg.php" method="POST">
+                            <label for="chk" aria-hidden="true">Регистрация</label>
+                            <input type="text" title="Введите 6 последних цифр пропуска!" pattern="[0-9]{6}" name="card" maxlength="6" placeholder="Номер пропуска" required="">
+                            <input type="text" title="Введите вашу группу!" name="group" maxlength="9" placeholder="Группа" required="">
+                            <input type="password" title="Только латинские буквы и цифры!" name="pswd" placeholder="Пароль" required="">
+                            <button>Зарегистрироваться</button>
+                        </form>
+                    </div>
+        
+                    <div class="login">
+                        <form action="validations/auth.php" method="POST">
+                            <label for="chk" aria-hidden="true">Вход</label>
+                            <input type="text" title="Введите 6 последних цифр пропуска!" name="card_in" pattern="[0-9]{6}" maxlength="6" placeholder="Номер пропуска" required="">
+                            <input type="password" name="pswd_in" placeholder="Пароль" required="">
+                            <button>Войти</button>
+                        </form>
+                    </div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
